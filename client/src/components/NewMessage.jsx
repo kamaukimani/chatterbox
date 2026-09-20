@@ -14,6 +14,7 @@ function NewMessage({ currentUser, onAddMessage }) {
       body: JSON.stringify({
         username: currentUser.username,
         body: body,
+        created_at:new Date(),
       }),
     })
       .then((r) => r.json())
