@@ -6,7 +6,9 @@ function Message({ message, currentUser, onMessageDelete, onUpdateMessage }) {
 
   const { id, username, body, created_at: createdAt } = message;
 
-  const timestamp = new Date(createdAt).toLocaleTimeString();
+  const timestamp =createdAt  != null
+    ? new Date(createdAt).toLocaleTimeString()
+    : "";
 
   const isCurrentUser = currentUser.username === username;
 
