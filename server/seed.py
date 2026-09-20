@@ -3,7 +3,7 @@ from random import choice as rc
 from faker import Faker
 
 from app import create_app
-from models import Message
+from app.models import Message
 from app.db import db
 
 fake = Faker()
